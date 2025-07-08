@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'chackra Petch', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     color: var(--cor-principal);
     font-weight: 580;
 }
@@ -49,6 +49,11 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 .card-img-top {
