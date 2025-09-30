@@ -5,6 +5,7 @@
     --border-color: #555;
     --accent-color: #3b82f6;
     --background-color: #121212;
+    --text-color: #f9fafb;
 }      
 
 :root {
@@ -14,6 +15,7 @@
     --border-color: #ccc;
     --accent-color: #007bff;
     --background-color: #f9fafb;
+    --text-color: #121212;
 }
 
 body {
@@ -116,6 +118,12 @@ a:hover, .btn-link:hover {
 /* ========== Modais ========= */
 .modal-content {
     border-radius: 15px;
+    background-color: var(--background-color);
+}
+
+.modal-title {
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 .modal-body img {
