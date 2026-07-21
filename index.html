@@ -1,396 +1,447 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <meta name="description" content="Portfólio de Henrique Lucchesi, estudante de programação. Projetos em HTML, CSS, JavaScript e Bootstrap.">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfólio de Henrique Lucchesi, desenvolvedor web especializado em HTML, CSS, JavaScript e Bootstrap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.png" />
-  <title>Meu portfólio</title>
+  <title>Henrique Lucchesi - Desenvolvedor Web</title>
 </head>
-
 <body>
 
-  <header class="container text-center">
-    <img src="img/Eu.png" alt="avatar do Henrique" class="rounded-circle" width="145" height="185" />
-
-        <!-- Botão de tema -->
-    <div id="switch" onclick="toggleMode()">
-      <button></button>
-    </div>
-
-    <p class="lead">Eu sou Henrique</p>
-
-    <h1>Eu sou estudante de Programação</h1>
-    <p class="lead2">
-      Olá! Eu sou Henrique Lucchesi,<br> Sou estudante do 2º ano do ensino médio 
-      e um estudante de programação. <br>Estou aprendendo HTML, CSS e JavaScript para criar sites legais e funcionais.
-    </p>
-    <p>Minhas habilidades são:</p>
-    <div>
-      <span class="badge bg-secondary">HTML</span>
-      <span class="badge bg-secondary">CSS</span>
-      <span class="badge bg-secondary">JavaScript</span>
-      <span class="badge bg-secondary">Bootstrap</span>
-    </div>
+  <!-- Header Fixo -->
+  <header class="header">
+    <nav class="header-content">
+      <div class="logo">HL</div>
+      <ul class="nav-menu">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
   </header>
 
-  <!-- Todos os projetos ficam dentro de um único <main> -->
-  <main class="container mt-5">
-    <h2 class="text-center mb-5">Meus Projetos</h2>
-    <div class="row justify-content-center g-4">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <img src="img/Eu.png" alt="Henrique Lucchesi" class="profile-image" />
+      <h1>Henrique Lucchesi</h1>
+      <p class="hero-subtitle">Desenvolvedor Web & Designer de Interfaces</p>
+      <p class="hero-description">
+        Transformando ideias em experiências digitais modernas e funcionais.<br>
+        Especializado em desenvolvimento front-end com foco em UX/UI.
+      </p>
       
-      <!-- Projeto 1 -->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-1.png" class="card-img-top" alt="Imagem do projeto Meu DevLinks" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Meu DevLinks</h5>
-            <p class="card-text">
-              O Devlinks é um site que eu fiz pra juntar todos os meus links, Como Github, Instagram e LinkedIn, em um só lugar, Ele tem...
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal1">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal1">Veja Meu Projeto</button>
-          </div>
-        </div>
+      <div class="cta-buttons">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+        <a href="#contato" class="btn btn-secondary">Entre em Contato</a>
       </div>
-
-      <!-- Projeto 2 -->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-2.png" class="card-img-top" alt="Imagem do projeto Meu Site de Certificado" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Meu Site de Certificado</h5>
-            <p class="card-text">
-              O site de Certificado é um site que eu fiz pra juntar e mostrar os certificados dos cursos que terminei. Dá pra ver todos os meus...
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal2">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal2">Veja Meu Projeto</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projeto 3 -->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-3.png" class="card-img-top" alt="Imagem do projeto Meu Portfólio" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Meu Portfólio</h5>
-            <p class="card-text">
-              Esse é o meu portfólio, onde eu mostro quem eu sou, minhas habilidades e alguns projetos que eu...
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal3">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal3">Veja Meu Projeto</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projeto 4 -->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-4.png" class="card-img-top" alt="Imagem do projeto Salu Bolsas" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Salu Bolsas</h5>
-            <p class="card-text">
-              Salu Bolsas é uma landing page que desenvolvi para uma empresa da minha tia. O site é responsivo para todos os dispositivos.
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal4">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal4">Veja Meu Projeto</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projeto 5 -->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-5.png" class="card-img-top" alt="Imagem do Projeto Tropicalia" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Projeto Tropicalia</h5>
-            <p class="card-text">
-              Projeto Tropicalia foi um projeto que desenvolvi para um projeto escolar. O site é responsivo para todos os dispositivos
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal5">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal5">Veja Meu Projeto</button>
-          </div>
-        </div>
-      </div>
-
-            <!-- Projeto 6 -->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-6.png" class="card-img-top" alt="Imagem do Projeto Plano Spotify" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Plano Spotify</h5>
-            <p class="card-text">
-              O Plano Spotify é um site que eu desenvolvi, inspirado na página de planos do Spotify. O site é responsivo e tem um design moderno.
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal6">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal6">Veja Meu Projeto</button>
-          </div>
-        </div>
-      </div>
-
-            <!-- Projeto 7-->
-      <div class="col-12 col-md-4">
-        <div class="card h-100">
-          <img src="img/projeto-7.png" class="card-img-top" alt="Imagem do Projeto Login" />
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">Pagina de Login/Criar conta/Esqueci minha senha</h5>
-            <p class="card-text">
-              Página de Login/Criar conta/Esqueci minha senha,é uma landig page que eu fiz para treinar minhas habilidades em HTML e CSS e JavaScript.
-              <a href="#" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modal7">Ver Mais</a>
-            </p>
-            <button type="button" class="btn btn-link p-0 align-self-start" data-bs-toggle="modal" data-bs-target="#modal7">Veja Meu Projeto</button>
-          </div>
-        </div>
-      </div>      
-
     </div>
-  </main>
+  </section>
 
-  <!-- ================= MODAIS ================= -->
-
-  <!-- Modal 1 -->
-  <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">DevLinks</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <p>O Devlinks é um site que eu fiz pra juntar todos os Meus links, Como Github, Instagram e LinkedIn, em um só lugar. E nele tem 2 funcionalidades, como:</p>
-          <ul>
-            <li>Tema escuro/claro</li>
-            <li>Botão para mudar de Idioma</li>
-          </ul>
-
-            <p>e nele utilizei</p>
-
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-
-          <img src="img/projeto-1.png" class="img-fluid rounded mb-3" alt="Imagem do projeto DevLinks" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://henriquelucchesi.github.io/DevLink/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/DevLink" target="_blank" rel="noopener">Ver código do projeto</a>
+  <!-- Sobre Mim Section -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2 class="section-title">Sobre Mim</h2>
+      <p class="section-subtitle">Conheça um pouco da minha trajetória</p>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p>Sou estudante do 3º ano do ensino médio, apaixonado por tecnologia e desenvolvimento web desde cedo. Minha jornada começou com curiosidade e se transformou em dedicação total ao aprendizado de novas tecnologias.</p>
+          <p>Tenho experiência em criar sites responsivos, modernos e funcionais, sempre buscando as melhores práticas de desenvolvimento e design. Cada projeto é uma oportunidade de aprender e evoluir.</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Modal 2 -->
-  <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Certificado</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <p>O site de Certificado é um site que eu fiz pra juntar e mostrar os certificados dos cursos que terminei e nele tem várias funcionalidades, como:</p>
-          <ul>
-            <li>Botão para mudar de Idioma</li>
-            <li>Tema escuro/claro</li>
-            <li>Um botão para baixar todos os certificados</li>
-            <li>Ordenação por data</li>
-            <li>Filtro por categoria</li>
-          </ul>
+  <!-- Projects Section -->
+  <section id="projetos" class="projects">
+    <div class="container">
+      <h2 class="section-title">Meus Projetos</h2>
+      <p class="section-subtitle">Portfólio de trabalhos desenvolvidos com paixão e dedicação</p>
+      
+      <div class="projects-grid">
+        
+        <!-- Projeto 1 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-1.png" alt="DevLinks" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal1')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Meu DevLinks</h3>
+            <p>Agregador de links sociais com tema claro/escuro e suporte multilíngue.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
 
-            <p>e nele utilizei</p>
+        <!-- Projeto 2 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-2.png" alt="Certificados" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal2')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Site de Certificados</h3>
+            <p>Plataforma para exibir certificados com filtros, ordenação e download em lote.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </article>
 
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-            </ul>
+        <!-- Projeto 3 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-3.png" alt="Portfólio" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal3')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Meu Portfólio</h3>
+            <p>Site pessoal mostrando habilidades, projetos e informações profissionais.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </article>
 
-          <img src="img/projeto-2.png" class="img-fluid rounded mb-3" alt="Imagem do projeto Certificado" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://henriquelucchesi.github.io/Certificados/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/Certificados" target="_blank" rel="noopener">Ver código do projeto</a>
-        </div>
+        <!-- Projeto 4 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-4.png" alt="Salu Bolsas" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal4')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Salu Bolsas</h3>
+            <p>Landing page responsiva para empresa de bolsas com galeria e formulário.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 5 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-5.png" alt="Tropicália" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal5')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Projeto Tropicália</h3>
+            <p>Site escolar responsivo com recursos de acessibilidade integrados.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 6 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-6.png" alt="Planos Spotify" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal6')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Plano Spotify</h3>
+            <p>Clone da página de planos do Spotify com design moderno e responsivo.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projeto 7 -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="img/projeto-7.png" alt="Sistema de Login" />
+            <div class="project-overlay">
+              <button class="btn-view" onclick="openModal('modal7')">Ver Detalhes</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Sistema de Login</h3>
+            <p>Interface completa de autenticação com login, cadastro e recuperação de senha.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Modal 3 -->
-  <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Portfólio</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <p>Esse é o meu portfólio, onde eu mostro quem eu sou, e tem algumas das minhas habilidades e projetos.</p>
-          <p>e nele utilizei:</p>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Bootstrap</li>
-          </ul>
-          <img src="img/projeto-3.png" class="img-fluid rounded mb-3" alt="Imagem do projeto Portfólio" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://henriquelucchesi.github.io/Meu-portfolio/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/Meu-portfolio" target="_blank" rel="noopener">Ver código do projeto</a>
-        </div>
+  <!-- Contact Section -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+      <p class="section-subtitle">Estou sempre aberto a novas oportunidades e colaborações</p>
+      
+      <div class="contact-links">
+        <a href="https://github.com/HenriqueLucchesi" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <div>
+            <h3>GitHub</h3>
+            <p>@HenriqueLucchesi</p>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/henriquelucchesioliveira/" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <div>
+            <h3>LinkedIn</h3>
+            <p>Henrique Lucchesi</p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/henriquelucchesioliveira/" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <div>
+            <h3>Instagram</h3>
+            <p>@henriquelucchesioliveira</p>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
-
-  <!-- Modal 4 -->
-  <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Salu Bolsas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <p>Salu Bolsas é uma landing page que desenvolvi para uma empresa da minha tia. O site é responsivo e nele tem várias funcionalidades, como:</p>
-          <ul>
-            <li>Formulário de contato</li>
-            <li>Galeria de imagens</li>
-            <li>Integração com redes sociais</li>
-          </ul>
-          <p>e nele utilizei:</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-            </ul>
-          <img src="img/projeto-4.png" class="img-fluid rounded mb-3" alt="Imagem do projeto Salu Bolsas" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://HenriqueLucchesi.github.io/SaluBolsas/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/SaluBolsas" target="_blank" rel="noopener">Ver código do projeto</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 5 -->
-  <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Projeto Tropicalia</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <p>Projeto Tropicalia foi um projeto que desenvolvi para um projeto escolar. O site é responsivo para todos os dispositivos e tem várias funcionalidades, como:</p>
-          <ul>
-            <li>Um botão de acessibilidade
-              <ul>
-                
-                <li>Que permite aumentar e diminuir o tamanho da fonte</li>
-                <li>Tem um contraste de cores para facilitar a leitura</li>
-              </ul>
-            </li>
-            <li>Formulário de contato</li>
-            <li>Galeria de imagens</li>
-            <li>Integração com redes sociais</li>
-          </ul>
-
-          </p>
-          <img src="img/projeto-5.png" class="img-fluid rounded mb-3" alt="Imagem do projeto Tropicalia" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://henriquelucchesi.github.io/Alura-Projeto-Tropicalia/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/Alura-Projeto-Tropicalia" target="_blank" rel="noopener">Ver código do projeto</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-   <!-- Modal 6 -->
-  <div class="modal fade" id="modal6" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Plano Spotify</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <p>O Plano Spotify é um site que eu desenvolvi, inspirado na página de planos do Spotify. O site é responsivo e tem um design moderno. Nele, você pode ver os diferentes planos oferecidos pelo Spotify, comparar preços e benefícios, e escolher o plano que melhor se adapta às suas necessidades.</p>
-          <p>e nele utilizei:</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-            </ul>
-          <img src="img/projeto-6.png" class="img-fluid rounded mb-3" alt="Imagem do projeto Plano Spotify" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://henriquelucchesi.github.io/Planos-spotify/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/Planos-Spotify" target="_blank" rel="noopener">Ver código do projeto</a>
-        </div>
-      </div>
-    </div>
-  </div>
-           
-    <!-- Modal 7 -->
-  <div class="modal fade" id="modal7" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Página de Login/Criar conta/Esqueci minha senha</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body
-">
-          <p>Página de Login/Criar conta/Esqueci minha senha,é uma landig page que eu fiz para treinar minhas habilidades em HTML e CSS e JavaScript. Nela, você pode fazer login na sua conta, criar uma nova conta ou recuperar sua senha esquecida.</p>
-          <p>e nela utilizei:</p>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-            </ul>
-          <img src="img/projeto-7.png" class="img-fluid rounded mb-3" alt="Imagem do projeto Página de Login/Criar conta/Esqueci minha senha" />
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <a href="https://henriquelucchesi.github.io/Tela-de-login/" target="_blank" rel="noopener">Ver projeto ao vivo</a>
-          <a href="https://github.com/HenriqueLucchesi/Tela-de-login" target="_blank" rel="noopener">Ver código do projeto</a>
-        </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="container py-5 text-center">
-    <h2 class="mb-4">Entre em contato</h2>
-    <p class="text-muted">Estou sempre disposto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato pelas redes sociais abaixo:</p>
-    <div class="footer-icons d-flex justify-content-center gap-5 mb-4">
-      <div class="d-flex flex-column align-items-center">
-        <ion-icon name="logo-github" size="large"></ion-icon>
-        <a href="https://github.com/HenriqueLucchesi" target="_blank" rel="noopener">Github</a>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <ion-icon name="logo-instagram" size="large"></ion-icon>
-        <a href="https://www.instagram.com/henriquelucchesioliveira/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <ion-icon name="logo-linkedin" size="large"></ion-icon>
-        <a href="https://www.linkedin.com/in/henriquelucchesioliveira/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-    <p class="text-muted fw-bold">© Copyright 2025. Produzido por Henrique Lucchesi</p>
+  <footer class="footer">
+    <p>© Copyright 2025. Desenvolvido com ❤️ por Henrique Lucchesi</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Botão Voltar ao Topo -->
+  <button class="scroll-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Modals (mantidos iguais) -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>DevLinks</h2>
+      <img src="img/projeto-1.png" alt="DevLinks" class="modal-image" />
+      <p>O DevLinks é um site que eu fiz para juntar todos os meus links, como GitHub, Instagram e LinkedIn, em um só lugar.</p>
+      <h3>Funcionalidades:</h3>
+      <ul>
+        <li>Tema escuro/claro</li>
+        <li>Botão para mudar de idioma</li>
+      </ul>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://henriquelucchesi.github.io/DevLink/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/DevLink" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Site de Certificados</h2>
+      <img src="img/projeto-2.png" alt="Certificados" class="modal-image" />
+      <p>Site para juntar e mostrar os certificados dos cursos que terminei.</p>
+      <h3>Funcionalidades:</h3>
+      <ul>
+        <li>Botão para mudar de idioma</li>
+        <li>Tema escuro/claro</li>
+        <li>Download de todos os certificados</li>
+        <li>Ordenação por data</li>
+        <li>Filtro por categoria</li>
+      </ul>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://henriquelucchesi.github.io/Certificados/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/Certificados" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Meu Portfólio</h2>
+      <img src="img/projeto-3.png" alt="Portfólio" class="modal-image" />
+      <p>Meu portfólio, onde mostro quem eu sou, minhas habilidades e alguns projetos.</p>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://henriquelucchesi.github.io/Meu-portfolio/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/Meu-portfolio" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>Salu Bolsas</h2>
+      <img src="img/projeto-4.png" alt="Salu Bolsas" class="modal-image" />
+      <p>Landing page responsiva desenvolvida para uma empresa da minha tia.</p>
+      <h3>Funcionalidades:</h3>
+      <ul>
+        <li>Formulário de contato</li>
+        <li>Galeria de imagens</li>
+        <li>Integração com redes sociais</li>
+      </ul>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://HenriqueLucchesi.github.io/SaluBolsas/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/SaluBolsas" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <h2>Projeto Tropicália</h2>
+      <img src="img/projeto-5.png" alt="Tropicália" class="modal-image" />
+      <p>Projeto desenvolvido para um trabalho escolar. Site responsivo com recursos de acessibilidade.</p>
+      <h3>Funcionalidades:</h3>
+      <ul>
+        <li>Botão de acessibilidade
+          <ul>
+            <li>Aumentar e diminuir fonte</li>
+            <li>Contraste de cores</li>
+          </ul>
+        </li>
+        <li>Formulário de contato</li>
+        <li>Galeria de imagens</li>
+        <li>Integração com redes sociais</li>
+      </ul>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://henriquelucchesi.github.io/Alura-Projeto-Tropicalia/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/Alura-Projeto-Tropicalia" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal6')">&times;</span>
+      <h2>Plano Spotify</h2>
+      <img src="img/projeto-6.png" alt="Planos Spotify" class="modal-image" />
+      <p>Site inspirado na página de planos do Spotify. Design moderno e responsivo para comparar planos e benefícios.</p>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://henriquelucchesi.github.io/Planos-spotify/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/Planos-Spotify" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal7')">&times;</span>
+      <h2>Sistema de Login</h2>
+      <img src="img/projeto-7.png" alt="Sistema de Login" class="modal-image" />
+      <p>Landing page desenvolvida para treinar habilidades em HTML, CSS e JavaScript. Sistema completo de autenticação.</p>
+      <h3>Funcionalidades:</h3>
+      <ul>
+        <li>Login na conta</li>
+        <li>Criar nova conta</li>
+        <li>Recuperar senha esquecida</li>
+      </ul>
+      <h3>Tecnologias:</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+      </ul>
+      <div class="modal-links">
+        <a href="https://henriquelucchesi.github.io/Tela-de-login/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+        <a href="https://github.com/HenriqueLucchesi/Tela-de-login" target="_blank" rel="noopener" class="btn btn-secondary">Ver Código</a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
